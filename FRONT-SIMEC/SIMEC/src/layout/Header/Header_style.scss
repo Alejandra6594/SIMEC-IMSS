@@ -1,0 +1,7 @@
+@import "../../utils/helpers/sass/BoxFlex.scss";
+@import "../../utils/helpers/sass/Colors_global.scss";
+
+.container-header {
+  overflow: hidden;
+  @include boxflex;
+}

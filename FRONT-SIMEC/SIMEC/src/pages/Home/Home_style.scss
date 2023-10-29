@@ -1,0 +1,30 @@
+@import "../../utils/helpers/sass/Colors_global.scss";
+@import "../../utils/helpers/sass/BoxFlex.scss";
+
+.container-home {
+  background-image: url("/imgs/fondoHome.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-white;
+
+  article {
+    .container-side-text {
+      @include boxflex($direction: column);
+      div {
+        .titulo-bienvenida {
+          font-size: 7rem;
+          font-weight: bold;
+        }
+        .subtitulo-bienvenida {
+          font-size: 2.5rem;
+          font-weight: 500;
+          color: $color-green-800;
+        }
+      }
+    }
+    .container-side-img {
+      @include boxflex;
+    }
+  }
+}
