@@ -4,4 +4,5 @@
 .container-header {
   overflow: hidden;
   @include boxflex;
+  border-bottom: 1px solid $color-green-imss;
 }

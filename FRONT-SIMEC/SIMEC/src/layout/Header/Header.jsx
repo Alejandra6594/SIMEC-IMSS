@@ -1,7 +1,7 @@
 import "./Header_style.scss";
 export const Header = () => {
   return (
-    <header className=" text-center container-header">
+    <header className="text-center container-header">
       <picture className="" style={{ width: "5rem" }}>
         <img
           src="/imgs/logo-imss.png"

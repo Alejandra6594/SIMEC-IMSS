@@ -1,15 +1,16 @@
 import { Navbar } from "./layout/Navbar/Navbar";
-import { Home } from "./pages/Home/Home";
+
+import { MyRoutes } from "./Routers/MyRoutes";
 
 function App() {
   return (
-    <section className="container-fluid container-home bg-white">
+    <section className="container-fluid bg-white">
       <article className="row min-vh-100">
-        <aside className="col-xl-2 overflow-y-hidden m-0 p-0">
+        <aside className="col-xl-2  m-0 p-0">
           <Navbar />
         </aside>
         <main className="col-xl-10 p-0 m-0">
-          <Home />
+          <MyRoutes></MyRoutes>
         </main>
       </article>
     </section>
