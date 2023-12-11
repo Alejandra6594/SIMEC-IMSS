@@ -1,0 +1,73 @@
+@import "../../styles/partials/box-flex";
+@import "../../styles/partials/variables";
+.card-unit {
+  height: 23rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+  &:hover &__img {
+    transform: perspective(960px) rotateX(20deg) translateY(0) translateZ(0);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgb(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 300;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+
+  .card-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include box-flex($direction: column);
+    // transform: translateY(25%);
+    transition: 0.3s ease;
+    opacity: 1;
+    padding: 0 0.5em;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.71);
+    z-index: 350;
+
+    .card-title {
+      font-size: 1.8rem;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+  &:hover .card-body {
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+}

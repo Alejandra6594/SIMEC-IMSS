@@ -1,5 +1,7 @@
+import { UnitsMenu } from "../../components/UnitsMenu/UnitsMenu";
 import { Header } from "../../layout/Header/Header";
-
+import { units } from "../../data/myData";
+import { UnitCard } from "../../components/UnitCard/UnitCard";
 export const Unidades = () => {
   return (
     <section className="container h-100">
@@ -10,7 +12,18 @@ export const Unidades = () => {
       </header>
       <section className="row">
         <div className="col-xl-12">
-          <h2 className="fw-bold mt-3">Unidades</h2>
+          <UnitsMenu />
+        </div>
+      </section>
+      <section className="container d-none d-md-block ">
+        <div className="row">
+          {units
+            ? units.map((unit) => (
+                <div className="col-3 mb-4" key={unit.id}>
+                  <UnitCard myUnit={unit} />
+                </div>
+              ))
+            : null}
         </div>
       </section>
     </section>
