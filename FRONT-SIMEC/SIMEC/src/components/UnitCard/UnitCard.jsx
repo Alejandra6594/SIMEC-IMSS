@@ -12,7 +12,9 @@ export const UnitCard = (props) => {
         <p className="card-text">{description}</p>
         <footer className="card-links d-flex ">
           <button className="btn btn-success">
-            <ItemNavLink to={urlMaps}>Ver en google maps</ItemNavLink>
+            <ItemNavLink to={urlMaps} target="_blank">
+              Ver en google maps
+            </ItemNavLink>
           </button>
         </footer>
       </div>

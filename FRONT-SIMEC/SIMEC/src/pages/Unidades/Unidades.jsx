@@ -2,7 +2,11 @@ import { UnitsMenu } from "../../components/UnitsMenu/UnitsMenu";
 import { Header } from "../../layout/Header/Header";
 import { units } from "../../data/myData";
 import { UnitCard } from "../../components/UnitCard/UnitCard";
+import { useUnidades } from "../../hooks/useUnidades";
+
 export const Unidades = () => {
+  const { unitSelected } = useUnidades();
+
   return (
     <section className="container h-100">
       <header className="row ">
@@ -16,6 +20,7 @@ export const Unidades = () => {
         </div>
       </section>
       <section className="container d-none d-md-block ">
+        <p>{unitSelected}</p>
         <div className="row">
           {units
             ? units.map((unit) => (
