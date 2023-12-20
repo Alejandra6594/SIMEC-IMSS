@@ -42,7 +42,7 @@ export const Home = () => {
                 to="/mantenimientos"
                 className="btn btn-secondary p-2 mx-2"
               >
-                Mira tus mantenimientos
+                Registra tus mantenimientos
               </ItemNavLink>
 
               <ItemNavLink
