@@ -8,11 +8,11 @@ import { Low } from "lowdb";
 
 let dbAssignedLoactionsFile;
 let dbCounters;
-let dbLocations;
+let dbUnidades;
 //? obtenemos la ruta absoluta del archivo que se esta ejecutando ahora
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export async function createConnectionToDbAssignedLocations() {
+export async function createConnectionToDbAssignedUnidades() {
   const fileDb = join(__dirname, "../database/db-unidades.json");
 
   const adapter = new JSONFile(fileDb);
@@ -21,7 +21,7 @@ export async function createConnectionToDbAssignedLocations() {
   // //leemos
   await dbAssignedLoactionsFile.read();
   // //asignamos
-  dbAssignedLoactionsFile.data ||= { assignedLocations: [] };
+  dbAssignedLoactionsFile.data ||= { assignedUnidades: [] };
   // //escribimos
   await dbAssignedLoactionsFile.write();
 }
@@ -40,21 +40,21 @@ export async function createConnectionToDbCounters() {
   // //escribimos
   await dbCounters.write();
 }
-export async function createConnectionToDbLocations() {
-  const fileDb = join(__dirname, "../database/db-locations.json");
+export async function createConnectionToDbUnidades() {
+  const fileDb = join(__dirname, "../database/db-unidades.json");
 
   const adapter = new JSONFile(fileDb);
 
-  dbLocations = new Low(adapter);
+  dbUnidades = new Low(adapter);
   // //leemos
-  await dbLocations.read();
+  await dbUnidades.read();
   // //asignamos
-  dbLocations.data ||= {
-    locations: [],
+  dbUnidades.data ||= {
+    Unidades: [],
   };
   // //escribimos
-  await dbLocations.write();
+  await dbUnidades.write();
 }
 export const getConnectionToDbCounters = () => dbCounters;
-export const getConnectionToDbAssignedLocations = () => dbAssignedLoactionsFile;
-export const getConnectionToDbLocations = () => dbLocations;
+export const getConnectionToDbAssignedUnidades = () => dbAssignedLoactionsFile;
+export const getConnectionToDbUnidades = () => dbUnidades;

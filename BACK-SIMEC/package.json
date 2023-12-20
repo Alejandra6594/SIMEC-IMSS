@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "startLowDb": "nodemon src/index.js --ignore database/db-unidades.json --ignore database/db-counters.json --ignore database/db-locations.json"
   },
   "dependencies": {
     "cors": "2.8.5",
@@ -18,7 +18,7 @@
     "uuid": "9.0.0"
   },
   "devDependencies": {
-    "nodemon":"2.0.20"
+    "nodemon": "2.0.20"
   },
   "author": "",
   "license": "ISC"
