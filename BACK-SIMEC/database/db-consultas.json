@@ -1,0 +1,28 @@
+{
+  "consultas": [
+    {
+      "nombre": "Adolfo",
+      "apellido": "Cauich",
+      "capacidad": "Media",
+      "id": "3aa35279-29b9-4fde-8271-408dc2954098"
+    },
+    {
+      "nombre": "Adrian",
+      "apellido": "Mendez",
+      "capacidad": "Alta",
+      "id": "1a7be3a7-6129-4214-a992-2b30bf16ef08"
+    },
+    {
+      "nombre": "Alan",
+      "apellido": "Ruiz",
+      "capacidad": "Media",
+      "id": "8c38f5d6-8ff7-4453-8def-bb1608035d18"
+    },
+    {
+      "nombre": "Denzel",
+      "apellido": "Huchim",
+      "capacidad": "Media",
+      "id": "3d4a0a15-33a1-44d6-ae7b-9790617409c7"
+    }
+  ]
+}

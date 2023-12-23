@@ -6,39 +6,25 @@ import { Low } from "lowdb";
 //?dirname extrae la direccion actual del archivo que se esta ejecutando
 //? fileURLToPath lo que hace es convertir un import a una ruta que dirname pueda entender
 
-let dbAssignedLoactionsFile;
-let dbCounters;
+let dbConsultas;
 let dbUnidades;
 //? obtenemos la ruta absoluta del archivo que se esta ejecutando ahora
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export async function createConnectionToDbAssignedUnidades() {
-  const fileDb = join(__dirname, "../database/db-unidades.json");
+export async function createConnectionToDbConsultas() {
+  const fileDb = join(__dirname, "../database/db-consultas.json");
 
   const adapter = new JSONFile(fileDb);
 
-  dbAssignedLoactionsFile = new Low(adapter);
+  dbConsultas = new Low(adapter);
   // //leemos
-  await dbAssignedLoactionsFile.read();
+  await dbConsultas.read();
   // //asignamos
-  dbAssignedLoactionsFile.data ||= { assignedUnidades: [] };
-  // //escribimos
-  await dbAssignedLoactionsFile.write();
-}
-export async function createConnectionToDbCounters() {
-  const fileDb = join(__dirname, "../database/db-counters.json");
-
-  const adapter = new JSONFile(fileDb);
-
-  dbCounters = new Low(adapter);
-  // //leemos
-  await dbCounters.read();
-  // //asignamos
-  dbCounters.data ||= {
-    counters: [],
+  dbConsultas.data ||= {
+    consultas: [],
   };
   // //escribimos
-  await dbCounters.write();
+  await dbConsultas.write();
 }
 export async function createConnectionToDbUnidades() {
   const fileDb = join(__dirname, "../database/db-unidades.json");
@@ -50,11 +36,10 @@ export async function createConnectionToDbUnidades() {
   await dbUnidades.read();
   // //asignamos
   dbUnidades.data ||= {
-    Unidades: [],
+    unidades: [],
   };
   // //escribimos
   await dbUnidades.write();
 }
-export const getConnectionToDbCounters = () => dbCounters;
-export const getConnectionToDbAssignedUnidades = () => dbAssignedLoactionsFile;
+export const getConnectionToDbConsultas = () => dbConsultas;
 export const getConnectionToDbUnidades = () => dbUnidades;

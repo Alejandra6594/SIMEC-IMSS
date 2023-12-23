@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "startLowDb": "nodemon src/index.js --ignore database/db-unidades.json --ignore database/db-counters.json --ignore database/db-locations.json"
+    "startLowDb": "nodemon src/index.js --ignore database/db-unidades.json --ignore database/db-consultas.json --ignore database/db-locations.json"
   },
   "dependencies": {
     "cors": "2.8.5",

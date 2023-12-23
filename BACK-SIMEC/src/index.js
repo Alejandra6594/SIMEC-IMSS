@@ -1,11 +1,9 @@
 import app from "./app.js";
 import {
-  // createConnectionToDbAssignedLocations,
-  createConnectionToDbCounters,
+  createConnectionToDbConsultas,
   createConnectionToDbUnidades,
 } from "./database.js";
-createConnectionToDbCounters();
-// createConnectionToDbAssignedLocations();
+createConnectionToDbConsultas();
 createConnectionToDbUnidades();
 // para ejecutar necesitamos el siguiente comando: npm run startLowDb
 app.listen(5000);

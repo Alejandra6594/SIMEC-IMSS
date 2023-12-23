@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import counterRoutes from "./routes/counters.js";
+import consultasRoutes from "./routes/consultas.js";
 // import assignedLocationsRoutes from "./routes/assignedLocations.js";
 import unitsRoutes from "./routes/unidades.js";
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json());
 const whiteList = ["http://localhost:5000", "http://127.0.0.1:5173", "*"];
 app.use(cors({ origin: "*" }));
 //* midleddware para el uso de endpoints de nuestra api
-app.use(counterRoutes);
+app.use(consultasRoutes);
 app.use(unitsRoutes);
 // app.use(assignedLocationsRoutes);
 
