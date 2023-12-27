@@ -1,25 +1,33 @@
 import { getConnectionToDbConsultas } from "../database.js";
 import { iteratorBodyRequestArray } from "../helpers/helpers.js";
+import { v4 } from "uuid";
 
 export const getConsultas = (req, res) => {
   const consultas = getConnectionToDbConsultas().data.consultas;
   res.json(consultas);
 };
 export const addConsultas = async (req, res) => {
+  // Crear un nuevo objeto de fecha
+  let fechaActual = new Date();
+
+  // Obtener la fecha actual
+  let fecha = fechaActual.toLocaleDateString();
+
+  // Obtener la hora actual
+  let hora = fechaActual.toLocaleTimeString();
+  const newConsult = {
+    id: v4(),
+    fecha_registro: fecha + " " + hora,
+    ...req.body,
+  };
   try {
     const db = getConnectionToDbConsultas();
-    if (db.data.consultas.length === 0) {
-      db.data.consultas = iteratorBodyRequestArray(req.body);
-    } else {
-      db.data.consultas.splice(0, db.data.consultas.length);
-      db.data.consultas = iteratorBodyRequestArray(req.body);
-      console.log("nuevos datos añadidos");
-    }
-
+    db.data.consultas.push(newConsult);
     await db.write();
-    res.json({
+    return res.json({
       status: 200,
-      statusMessage: "consultas added successfully",
+      statusMessage: "Consult added successfully",
+      dataAdded: newConsult,
     });
   } catch (error) {
     return res.status(500).send(error);

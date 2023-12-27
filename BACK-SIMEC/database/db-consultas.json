@@ -1,28 +1,32 @@
 {
   "consultas": [
     {
-      "nombre": "Adolfo",
-      "apellido": "Cauich",
-      "capacidad": "Media",
-      "id": "3aa35279-29b9-4fde-8271-408dc2954098"
+      "id": "034a7a17-80c3-4a1a-82b4-26cde598d75d",
+      "fecha_registro": "26/12/2023 18:15:43",
+      "matricula_imss": "5678",
+      "unidad": "HGR",
+      "ip": "192.168.1.3",
+      "usuario": "Alexis Chim",
+      "area": "TI",
+      "marca": "Lenovo",
+      "serie": "ABC123456",
+      "modelo": "Inspiron 15",
+      "sistema_operativo": "Windows 11",
+      "observaciones": ""
     },
     {
-      "nombre": "Adrian",
-      "apellido": "Mendez",
-      "capacidad": "Alta",
-      "id": "1a7be3a7-6129-4214-a992-2b30bf16ef08"
-    },
-    {
-      "nombre": "Alan",
-      "apellido": "Ruiz",
-      "capacidad": "Media",
-      "id": "8c38f5d6-8ff7-4453-8def-bb1608035d18"
-    },
-    {
-      "nombre": "Denzel",
-      "apellido": "Huchim",
-      "capacidad": "Media",
-      "id": "3d4a0a15-33a1-44d6-ae7b-9790617409c7"
+      "id": "40ce6a06-4912-42d6-a0c8-661fb3e175eb",
+      "fecha_registro": "26/12/2023 18:46:40",
+      "matricula_imss": "5634",
+      "unidad": "umf",
+      "ip": "192.134.56.01",
+      "usuario": "Ale burgos",
+      "area": "ti",
+      "marca": "HP",
+      "serie": "RTTYIYUY5",
+      "modelo": "Macbook",
+      "sistema_operativo": "Linux",
+      "observaciones": "Se realizo la liberación de memoria y samblaje de un nuevo disco solido"
     }
   ]
 }
