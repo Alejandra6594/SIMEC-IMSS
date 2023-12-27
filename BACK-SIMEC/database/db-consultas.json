@@ -13,20 +13,6 @@
       "modelo": "Inspiron 15",
       "sistema_operativo": "Windows 11",
       "observaciones": ""
-    },
-    {
-      "id": "40ce6a06-4912-42d6-a0c8-661fb3e175eb",
-      "fecha_registro": "26/12/2023 18:46:40",
-      "matricula_imss": "5634",
-      "unidad": "umf",
-      "ip": "192.134.56.01",
-      "usuario": "Ale burgos",
-      "area": "ti",
-      "marca": "HP",
-      "serie": "RTTYIYUY5",
-      "modelo": "Macbook",
-      "sistema_operativo": "Linux",
-      "observaciones": "Se realizo la liberación de memoria y samblaje de un nuevo disco solido"
     }
   ]
 }
