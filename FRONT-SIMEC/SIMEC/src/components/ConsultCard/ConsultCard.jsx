@@ -1,5 +1,5 @@
 export const ConsultCard = (props) => {
-  const { consult } = props;
+  const { consult, deleteConsult } = props;
   const {
     id,
     fecha_registro,
@@ -109,7 +109,12 @@ export const ConsultCard = (props) => {
         {/* AQUI TERMINA EL ACORDION */}
 
         <footer className="mt-3">
-          <button className="btn btn-danger">Eliminar</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => deleteConsult(id, matricula_imss)}
+          >
+            Eliminar
+          </button>
         </footer>
       </div>
       <div className="card-footer text-body-secondary">

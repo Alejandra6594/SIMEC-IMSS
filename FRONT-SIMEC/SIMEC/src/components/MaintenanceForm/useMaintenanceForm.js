@@ -38,7 +38,6 @@ export const useMaintenanceForm = () => {
         headers: { "content-type": "application/json" },
       };
       let res = await api.post(urlConsults, options);
-      console.log(res);
       setConsultSuccess(true);
       setTimeout(() => {
         setConsultSuccess(false);

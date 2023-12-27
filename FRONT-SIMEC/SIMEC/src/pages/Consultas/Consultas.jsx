@@ -3,7 +3,7 @@ import { Header } from "../../layout/Header/Header";
 import { useLogicConsults } from "./useLogicConsults";
 
 export const Consultas = () => {
-  let { consults } = useLogicConsults();
+  let { consults, deleteConsult } = useLogicConsults();
 
   return (
     <section className="container h-100">
@@ -27,7 +27,7 @@ export const Consultas = () => {
           {consults.length > 0 ? (
             consults.map((consult) => (
               <div className="col-3 mb-4" key={consult.id}>
-                <ConsultCard consult={consult} />
+                <ConsultCard consult={consult} deleteConsult={deleteConsult} />
               </div>
             ))
           ) : (
