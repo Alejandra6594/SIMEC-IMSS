@@ -9,11 +9,11 @@ export const Mantenimientos = () => {
           <Header />
         </div>
       </header>
-      {/* <section className="row">
+      <section className="row">
         <div className="col-xl-12">
-          <h2 className="fw-bold mt-3">Mantenimientos</h2>
+          <h2 className="fw-bold mt-3">Registro de mantenimientos</h2>
         </div>
-      </section> */}
+      </section>
       <section className="row d-flex justify-content-center mt-4">
         <div className="col-xl-8 ">
           <MaintenanceForm />

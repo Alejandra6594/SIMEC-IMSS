@@ -17,6 +17,7 @@ export const Unidades = () => {
           <UnitsMenu
             handleFilterUnits={handleFilterUnits}
             unitSelected={unitSelected}
+            unitsFiltered={unitsFiltered}
           />
         </div>
       </section>
@@ -25,13 +26,17 @@ export const Unidades = () => {
           className="row "
           style={{ minHeight: "50vh", maxHeight: "70vh", overflow: "auto" }}
         >
-          {unitsFiltered
-            ? unitsFiltered.map((unit) => (
-                <div className="col-3 mb-4" key={unit.id}>
-                  <UnitCard myUnit={unit} />
-                </div>
-              ))
-            : null}
+          {unitsFiltered.length > 0 ? (
+            unitsFiltered.map((unit) => (
+              <div className="col-3 mb-4" key={unit.id}>
+                <UnitCard myUnit={unit} />
+              </div>
+            ))
+          ) : (
+            <h4 className="text-danger">
+              No se encuentran las unidades, verificar el servidor.
+            </h4>
+          )}
         </div>
       </section>
     </section>
